@@ -14,7 +14,6 @@ class ProductRepository extends ServiceEntityRepository
         parent::__construct($reg, Product::class);
     }
 
-    /** @return Product[] */
     public function findByCategory(Category $cat): array
     {
         return $this->getEntityManager()

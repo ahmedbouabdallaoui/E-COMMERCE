@@ -13,7 +13,6 @@ class CategoryRepository extends ServiceEntityRepository
         parent::__construct($reg, Category::class);
     }
 
-    /** @return array<int, array{0: Category, productCount: int}> */
     public function findAllWithProductCount(): array
     {
         return $this->getEntityManager()

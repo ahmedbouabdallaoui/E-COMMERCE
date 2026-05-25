@@ -25,13 +25,11 @@ class CartHandler
         $this->cart->remove($productId);
     }
 
-    /** @return CartItemDTO[] */
     public function getItems(): array
     {
         return $this->cart->getItems();
     }
 
-    /** @return CartItemDTO[] */
     public function getEnrichedItems(): array
     {
         return array_map(
